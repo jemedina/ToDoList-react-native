@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, KeyboardAvoidingView} from 'react-native';
+import { StyleSheet, Platform, KeyboardAvoidingView} from 'react-native';
 import { Header } from 'react-native-elements';
 import TodoList from './src/components/TodoList';
 import CreateItem from './src/components/CreateItem';
@@ -44,7 +44,8 @@ class App extends Component {
   render() {
     return (
 
-      <KeyboardAvoidingView style={{ flex: 1 }} behavior="padding">
+      <KeyboardAvoidingView style={{ flex: 1 }} 
+        behavior={Platform.OS === 'ios'?"padding":"height"}>
         <Header
             containerStyle={{
               backgroundColor: '#666',
