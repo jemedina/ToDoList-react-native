@@ -1,4 +1,4 @@
-Thisi is a simple app make with react native using expo tool.
+Thisi is a simple app made with react native using expo tool.
 
 To run this just do `npm install` and then `npm strart`
 
